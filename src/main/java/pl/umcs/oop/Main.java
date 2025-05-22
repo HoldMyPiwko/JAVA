@@ -1,23 +1,21 @@
 package pl.umcs.oop;
 
-import pl.umcs.oopDataBase.DataBaseConnection;
+import pl.umcs.DataBase.DataBaseConnection;
+import pl.umcs.auth.Account;
+import pl.umcs.auth.AccountManager;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         DataBaseConnection db = new DataBaseConnection();
         db.connect("test.db");
-        try(Statement statement = db.getConnection().createStatement()) {
-            statement.executeUpdate("""
-                    CREATE TABLE IF NOT EXISTS test(
-                        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                        value TEXT NOT NULL)
-                    """);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        AccountManager am = new AccountManager(db);
+        am.register("user2", "pass123");
+        System.out.println(am.authenticate("user2", "pass123"));
+        System.out.println(am.getAccount(1));
+        System.out.println(am.getAccount("user2"));
     }
 }

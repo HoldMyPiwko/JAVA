@@ -1,4 +1,4 @@
-package pl.umcs.oopDataBase;
+package pl.umcs.DataBase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
