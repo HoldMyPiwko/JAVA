@@ -27,4 +27,12 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/HoldMyPiwko/JAVA/tree/master</url>
+        </repository>
+    </distributionManagement>
+
 </project>
