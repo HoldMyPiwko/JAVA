@@ -1,4 +1,4 @@
-GraficsContext
+#GraficsContext
 
 strokeRect(x, y, w, h) – rysuje prostokąt z ramką,
 
