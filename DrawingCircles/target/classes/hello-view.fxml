@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="kolos_2_22.drawingcircles.HelloController">
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" left="10" right="10" bottom="10"/>
+            </padding>
+
+            <HBox spacing="10">
+                <TextField fx:id="inputField" promptText="Wpisz tekst"/>
+                <Button text="Dodaj" onAction="#onAdd"/>
+                <Button text="Sortuj" onAction="#onSort"/>
+                <Button text="Usuń" onAction="#onDelete"/>
+                <Button text="Sortuj A-Z" onAction="#sortAZ"/>
+                <Button text="Sortuj Z-A" onAction="#sortZA"/>
+                <ColorPicker fx:id="colorPicker"/>
+                <ComboBox fx:id="chooseForm"/>
+            </HBox>
+            <Slider fx:id="sizeSlider" min="5" max="50" value="20"/>
+            <Label fx:id="sliderLabel" text="Rozmiar: 20"/>
+        </VBox>
+    </top>
+    <center>
+        <Canvas fx:id="canvas" width="400" height="300" onMouseClicked="#onCanvasClick"/>
+    </center>
+    <right>
+        <VBox spacing="5">
+            <padding>
+                <Insets bottom="10" right="10" left="10" top="10"/>
+            </padding>
+        <TextField fx:id="textField"/>
+        <ListView fx:id="listView" prefWidth="150"/>
+        </VBox>
+    </right>
+</BorderPane>
