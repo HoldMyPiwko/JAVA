@@ -1,4 +1,5 @@
 GraphicsContext – najważniejsze metody
+
 🟥 Prostokąty i elipsy:
 strokeRect(x, y, w, h) – rysuje obramowanie prostokąta
 
@@ -9,6 +10,7 @@ strokeOval(x, y, w, h) – rysuje kontur elipsy
 fillOval(x, y, w, h) – rysuje wypełnioną elipsę
 
 🟨 Linie i kształty:
+
 strokeLine(x1, y1, x2, y2) – rysuje linię między punktami
 
 strokePolygon(xPoints[], yPoints[], nPoints) – rysuje wielokąt z ramką
