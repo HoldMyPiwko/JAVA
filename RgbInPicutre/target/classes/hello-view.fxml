@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Label?>
+<HBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="kolos_2_22.rgbinpicutre.HelloController">
+    <ImageView fx:id="originalImageView" fitWidth="200" preserveRatio="true"/>
+    <ImageView fx:id="processedImageView" fitWidth="200" preserveRatio="true"/>
+    <VBox spacing="10">
+        <Button text="Rozmyj obraz" onAction="#onBlur"/>
+        <Slider fx:id="blurSlider" min="1" max="10" value="3" blockIncrement="1"/>
+        <Label fx:id="blurLabel" text="Blur: 3"/>
+    </VBox>
+    <VBox spacing="10">
+        <Button text="Przekształć na odcień szarości" onAction="#onConvert"/>
+        <Slider fx:id="graySlider" max="1" value="1" blockIncrement="0.1"/>
+        <Label fx:id="grayLabel" text="Szarość: 1.0"/>
+    </VBox>
+</HBox>
